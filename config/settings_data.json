@@ -58,6 +58,17 @@
 						"secondary_button_label": "#FFFFFF",
 						"shadow": "#121212"
 					}
+				},
+				"scheme-menu-drawer": {
+					"settings": {
+						"background": "",
+						"background_gradient": "rgba(252,246,242, 0.5)",
+						"text": "#FFFFFF",
+						"button": "#FFFFFF",
+						"button_label": "#334FB4",
+						"secondary_button_label": "#FFFFFF",
+						"shadow": "#121212"
+					}
 				}
 			},
 			"type_header_font": "jost_n4",
