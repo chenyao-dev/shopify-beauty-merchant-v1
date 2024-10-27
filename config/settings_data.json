@@ -7,9 +7,9 @@
 				"scheme-1": {
 					"settings": {
 						"background": "#fdd8c8",
-						"background_gradient": "linear-gradient(rgb(252,246,242) 20%, rgba(253,216,200,255) 100%)",
+						"background_gradient": "linear-gradient(rgb(252,246,242) 0%, rgba(253,216,200,255) 90%)",
 						"text": "#000000",
-						"button": "rgb(252,246,242,10)",
+						"button": "#FFFFFF",
 						"button_label": "#000000",
 						"secondary_button_label": "#000000",
 						"shadow": "#121212"
@@ -50,9 +50,9 @@
 				},
 				"scheme-5": {
 					"settings": {
-						"background": "#334FB4",
-						"background_gradient": "",
-						"text": "#FFFFFF",
+						"background": "",
+						"background_gradient": "rgba(252,246,242, 0.5)",
+						"text": "#000000",
 						"button": "#FFFFFF",
 						"button_label": "#334FB4",
 						"secondary_button_label": "#FFFFFF",
@@ -72,7 +72,7 @@
 			"animations_hover_elements": "none",
 			"buttons_border_thickness": 1,
 			"buttons_border_opacity": 100,
-			"buttons_radius": 0,
+			"buttons_radius": 4,
 			"buttons_shadow_opacity": 50,
 			"buttons_shadow_horizontal_offset": 8,
 			"buttons_shadow_vertical_offset": 6,
