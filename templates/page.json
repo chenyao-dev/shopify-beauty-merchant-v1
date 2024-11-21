@@ -4,7 +4,7 @@
       "type": "pricing-content",
       "blocks": {
         "browAndEyeTreatments": {
-          "type": "pricing_content_row",
+          "type": "collapsible_content_row",
           "settings": {
             "heading": "Brow and Eye Treatments",
             "icon": "heart",
@@ -47,7 +47,7 @@
           }
         },
         "lashExtensions": {
-          "type": "pricing_content_row",
+          "type": "collapsible_content_row",
           "settings": {
             "heading": "Lash Extensions",
             "icon": "heart",
@@ -86,7 +86,7 @@
           }
         },
         "makeup": {
-          "type": "pricing_content_row",
+          "type": "collapsible_content_row",
           "settings": {
             "heading": "Makeup",
             "icon": "heart",
@@ -109,7 +109,7 @@
           }
         },
         "Waxing": {
-          "type": "pricing_content_row",
+          "type": "collapsible_content_row",
           "settings": {
             "heading": "Waxing",
             "icon": "heart",
@@ -137,7 +137,7 @@
           }
         },
 				"cosmeticTattoo": {
-          "type": "pricing_content_row",
+          "type": "collapsible_content_row",
           "settings": {
             "heading": "Cosmetic Tattoo",
             "icon": "heart",
@@ -177,7 +177,7 @@
         "layout": "none",
         "color_scheme": "",
         "container_color_scheme": "",
-        "open_first_pricing_content_row": false,
+        "open_first_collapsible_content_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,

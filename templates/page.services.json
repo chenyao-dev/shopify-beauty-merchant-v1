@@ -1,14 +1,191 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "collapsible_content_services": {
+      "type": "pricing-content",
+      "blocks": {
+        "browAndEyeTreatments": {
+          "type": "pricing_content_row",
+          "settings": {
+            "heading": "Brow and Eye Treatments",
+            "icon": "heart",
+            "row_content": [
+							"Brow Tint & Sculpt", 
+							"price|From $55", 
+							"Brow Tint & Sculpt + Lash Tint",
+							"price|From $78",
+							"Hybrid Brow Colour & Shape",
+							"price|From $65",
+							"info|Hybrid Brow tint lasts up to 14 days on the skin and up to 7 WEEKS on the hair. Colour is completely customized to suit you. The latest innovation in brow treatments",
+							"Hybrid Brow Colour Only",
+							"price|From $42",
+							"Brow Tint & Sculpt + Lash Lift & Tint",
+							"price|From $139",
+							"info|Brow Shape + Tint, Lash Lift + Tint",
+							"Brow Lamination, Sculpt & Tint",
+							"price|From $89",
+							"info|Eyebrow Lamination solves the messy brow issue, creates volume and fullness, while giving you a sleek well-kept brow shape for up to 6 weeks",
+							"Brow Lamination + Lash Lift and Tint",
+							"price|From $175",
+							"Lash Lift and Tint",
+							"price|From $95",
+							"Brow Shape",
+							"price|From $35",
+							"Brow Tint",
+							"price|From $35",
+							"Lash Tint",
+							"price|From $39",
+							"Brow and Lash Tint",
+							"price|From $55",
+							"Brow Shape and Lash Tint",
+							"price|From $65",
+							"Lip or chin",
+							"price|$15",
+							"Lip and chin",
+							"price|$30"
+						],
+            "page": ""
+          }
+        },
+        "lashExtensions": {
+          "type": "pricing_content_row",
+          "settings": {
+            "heading": "Lash Extensions",
+            "icon": "heart",
+            "row_content": [
+							"head|Russian Volume Lashes",
+							"head-info|Lighter, fuller & fluffier! Our Russian volume lashes are the ultimate glam set. Creates Dramatic Volume.",
+							"Natural Volume Full Set",
+							"price|$129",
+							"Natural Volume Infill",
+							"price|$99",
+							"Glam Volume Full Set",
+							"price|$185",
+							"Glam Volume Infill",
+							"price|$149",
+							"head|Classic Lashes",
+							"Classic Full Set",
+							"price|$95",
+							"info|The perfect set for an everyday, natural look. Customized especially for you. Lashes are applied one extension to one natural lash.",
+							"Classic Infills",
+							"price|$75",
+							"info|Previous set must be lashed by us. Anything over 4 weeks will be charged as a Full Set.",
+							"head|Hybrid Lashes",
+							"Hybrid Lashes",
+							"price|$115",
+							"info|A mix of fans & classic lashes that create super full and fluffy set.",
+							"Hybrid Infills",
+							"price|$99",
+							"info|Previous set must be lashed by us. Anything over 4 weeks will be charged as a Full Set.",
+							"head|Lash Extension Removal",
+							"With new set",
+							"price|$30",
+							"Removal on its own",
+							"price|$39"
+						],
+            "page": ""
+          }
+        },
+        "makeup": {
+          "type": "pricing_content_row",
+          "settings": {
+            "heading": "Makeup",
+            "icon": "heart",
+            "row_content": [
+							"Full Face Makeup Application - 60mins",
+							"price|From $109",
+							"Express Eye Makeup Application - 30mins",
+							"price|From $65",
+							"info|Have your eye makeup perfected by our experienced artists. (Includes brows filled)",
+							"That Bit Extra - 75 mins",
+							"price|From $125",
+							"info|FULL GLAM! For those extra special occasions! (Does not include lashes, please book this as well should you require)",
+							"head|Faux Lash Application",
+							"Strip Lashes",
+							"price|$20",
+							"Individual Clusters",
+							"price|$25"
+						],
+            "page": ""
+          }
+        },
+        "Waxing": {
+          "type": "pricing_content_row",
+          "settings": {
+            "heading": "Waxing",
+            "icon": "heart",
+            "row_content": [
+							"First Time Brazilian or over 6 weeks",
+							"price|$75",
+							"Brazilian Maintenance under 6 weeks",
+							"price|$62",
+							"Extended Bikini",
+							"price|$49",
+							"Basic bikini",
+							"price|$39",
+							"Half Leg",
+							"price|$46",
+							"Full Leg",
+							"price|$69",
+							"Half arm",
+							"price|$36",
+							"Full arm",
+							"price|$55",
+							"Under Arm",
+							"price|$35"
+						],
+            "page": ""
+          }
+        },
+				"cosmeticTattoo": {
+          "type": "pricing_content_row",
+          "settings": {
+            "heading": "Cosmetic Tattoo",
+            "icon": "heart",
+            "row_content": [
+							"Ombré Powder Brows - Initial Session - 240mins",
+							"price|$399",
+							"info|Ombré involves a gentle transition from light to dark, with the front of the brows softly shaded in light and gradually deepening toward the tail. Powder brows ensure a consistent colour from the front to the tail offering a convenient alternative for those tired of daily brow makeup application. For this procedure we use a machine to implant pigment into the skin and is suitable to all skin types regardless of age. Whether you desire a bold or subtle look, this technique is ideal for addressing thin, sparse, or mis-shapen eyebrows, especially great for mature clients. If you've previously had brow tattooing, please contact us before booking. A touch up will be required 6-8 weeks after the initial session.",
+							"Ombré Powder Brows - Perfecting Session - 120mins",
+							"price|$150",
+							"info|Follow Up Appointment from Initial Session. Usually 6-8 weeks from first visit. Must be within 12 weeks",
+							"Brow Colour Boost - 3-6 Months - 90 mins",
+							"price|$175",
+							"Brow Colour Boost - 6-12 Months - 90 mins",
+							"price|$200",
+							"Brow Colour Boost - 12-18 Months - 90 mins",
+							"price|$299",
+							"Brow Colour Boost - 18-24 Months - 120 mins",
+							"price|$350",
+							"info|Previous service must be done at The Beauty Merchant"
+						],
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "browAndEyeTreatments",
+        "lashExtensions",
+        "makeup",
+        "Waxing",
+				"cosmeticTattoo"
+      ],
       "settings": {
+        "caption": "",
+        "heading": "Our services",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_pricing_content_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "collapsible_content_services"
   ]
 }
