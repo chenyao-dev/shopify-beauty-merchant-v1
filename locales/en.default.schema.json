@@ -2765,7 +2765,11 @@
             "image": {
               "label": "Image"
             },
-            "title": {
+            "title-one": {
+              "label": "Heading",
+              "default": "Column"
+            },
+						"title-two": {
               "label": "Heading",
               "default": "Column"
             },
