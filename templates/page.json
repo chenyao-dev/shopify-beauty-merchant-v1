@@ -12,6 +12,15 @@
     "multicolumn_VKGiJH": {
       "type": "multicolumn",
       "blocks": {
+        "column_ym9qzj": {
+          "type": "column",
+          "settings": {
+            "title": "Column{{ page.metafields.custom.service_item | metafield_text: field: 'service_name' }}",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>{{ page.metafields.custom.service_item | metafield_tag: field: 'prices' }}",
+            "link_label": "{{ page.metafields.custom.service_item | metafield_text: field: 'information' }}",
+            "link": ""
+          }
+        },
         "column_QNCFdA": {
           "type": "column",
           "repeater": "{{ page.metafields.custom.service_item.value }}",
@@ -21,10 +30,21 @@
             "link_label": "{{ block.repeater.information.value }}",
             "link": ""
           }
+        },
+        "column_ez7rPX": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "column_QNCFdA"
+        "column_ym9qzj",
+        "column_QNCFdA",
+        "column_ez7rPX"
       ],
       "settings": {
         "title": "Multicolumn",
