@@ -28,22 +28,23 @@
         "row_wCYPQP"
       ],
       "custom_css": [
-        ".image-with-text__media-item {display: none;}"
+        ".image-with-text__media-item {display: none;}",
+        ".button {display: none}"
       ],
       "settings": {
         "image_height": "medium",
         "desktop_image_width": "small",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "text_style": "body",
-        "button_style": "secondary",
+        "button_style": "primary",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
