@@ -16,9 +16,9 @@
           "type": "column",
           "repeater": "{{ page.metafields.custom.service_item.value }}",
           "settings": {
-            "title": "{{ block.repeater.price.value }}",
+            "title": "{{ block.repeater.prices.value }}",
             "text": "<p>{{ block.repeater.service_name.value }}</p>",
-            "link_label": "",
+            "link_label": "{{ block.repeater.information.value }}",
             "link": ""
           }
         }
