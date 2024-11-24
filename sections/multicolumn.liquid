@@ -7,6 +7,11 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+	.serviceMenu {
+		display: flex;
+		justify-content: space-between;
+	}
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -119,8 +124,11 @@
                 </div>
               {%- endif -%}
               <div class="multicolumn-card__info">
-                {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                {%- if block.settings.title-one != blank or block.settings.title-two != blank -%}
+                  <h3 class="inline-richtext serviceMenu">
+										<div>{{ block.settings.title-one }}</div>
+										<div>{{ block.settings.title-two }}</div>
+									</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
@@ -398,9 +406,15 @@
         },
         {
           "type": "inline_richtext",
-          "id": "title",
-          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
-          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+          "id": "title-one",
+          "default": "t:sections.multicolumn.blocks.column.settings.title-one.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title-one.label"
+        },
+				{
+          "type": "inline_richtext",
+          "id": "title-two",
+          "default": "t:sections.multicolumn.blocks.column.settings.title-two.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title-two.label"
         },
         {
           "type": "richtext",
