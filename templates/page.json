@@ -27,7 +27,9 @@
       "block_order": [
         "row_wCYPQP"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".image-with-text__media-item {display: none;}"
+      ],
       "settings": {
         "image_height": "medium",
         "desktop_image_width": "small",
