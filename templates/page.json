@@ -15,8 +15,8 @@
         "row_fKgbzR": {
           "type": "row",
           "settings": {
-            "caption": "Brow and eye treatments",
-            "heading": "",
+            "caption": "",
+            "heading": "<strong>Brow and eye treatments</strong>",
             "text": "",
             "button_label": "Button label",
             "button_link": ""
@@ -64,10 +64,20 @@
     "multirow_hzMtFy": {
       "type": "multirow",
       "blocks": {
+        "row_h8dHjq": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Lash Extensions</strong>",
+            "text": "",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
         "row_hW9wHJ": {
           "type": "row",
           "settings": {
-            "caption": "Lash Extensions",
+            "caption": "",
             "heading": "Russian Volume Lashes",
             "text": "<p>Lighter, fuller & fluffier! Our Russian volume lashes are the ultimate glam set. Creates Dramatic Volume.</p>",
             "button_label": "Button label",
@@ -87,6 +97,7 @@
         }
       },
       "block_order": [
+        "row_h8dHjq",
         "row_hW9wHJ",
         "row_47AMNG"
       ],
