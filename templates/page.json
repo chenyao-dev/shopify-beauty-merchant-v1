@@ -28,7 +28,7 @@
         "row_wCYPQP"
       ],
       "custom_css": [
-        ".multirow {box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; margin-bottom: 2em; margin-right: 2em; margin-left: 2em;}",
+        ".multirow {box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; margin-bottom: 2em; /* margin-right: 2em; margin-left: 2em; */}",
         ".image-with-text__content {padding: 1em;}",
         ".image-with-text__media-item {display: none;}",
         ".button {display: none;}",
