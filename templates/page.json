@@ -55,7 +55,7 @@
       "blocks": {
         "row_kp4q9k": {
           "type": "row",
-          "repeater": "{{ page.metafields.custom.service_item.value }}",
+          "repeater": "{{ page.metafields.custom.service_lashextension.value }}",
           "settings": {
             "caption": "{{ block.repeater.prices.value }}",
             "heading": "{{ block.repeater.service_name.value }}",
