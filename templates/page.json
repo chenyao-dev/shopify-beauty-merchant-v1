@@ -39,8 +39,8 @@
         "row_wCYPQP"
       ],
       "custom_css": [
-        ".multirow__inner:hover {background: linear-gradient( 90deg, rgba(240, 194, 247, 0.22454919467787116) 0%, rgba(255, 255, 255, 0.6055015756302521) 100% );}",
-        ".multirow__inner {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;background: radial-gradient(circle, rgba(255,255,255,0.22454919467787116) 0%, rgba(240,194,247,0.5466780462184874) 100%); margin-bottom: 2em; margin-top: 2em;}",
+        ".multirow__inner:hover {background: linear-gradient( 90deg, rgba(240, 194, 247, 0.22454919467787116) 0%, rgba(255, 255, 255, 0.6055015756302521) 100% ); }",
+        ".multirow__inner {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; background: radial-gradient( circle, rgba(255, 255, 255, 0.22454919467787116) 0%, rgba(240, 194, 247, 0.5466780462184874) 100% ); margin-bottom: 2em; margin-top: 2em;}",
         ".image-with-text__content {padding: 1em;}",
         ".image-with-text__media-item {display: none;}",
         ".button {display: none;}",
