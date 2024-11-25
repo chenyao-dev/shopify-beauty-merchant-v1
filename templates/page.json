@@ -93,7 +93,7 @@
       ],
       "custom_css": [
         ".multirow__inner:hover {background: radial-gradient( circle, rgba(255, 255, 255, 0.22454919467787116) 0%, rgba(247, 194, 205, 0.44303658963585435) 100% );}",
-        ".multirow__inner {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; margin-bottom: 2em;}",
+        ".multirow__inner {box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin-bottom: 2em;}",
         ".image-with-text__content {padding: 1em;}",
         ".image-with-text__media-item {display: none;}",
         ".button {display: none;}",
