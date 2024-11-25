@@ -39,8 +39,7 @@
         "row_wCYPQP"
       ],
       "custom_css": [
-        ".multirow__inner:hover {background-color: rgb(117 190 218 / 80%);}",
-        ".multirow__inner {opacity: 0.3; box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px; margin-bottom: 2em; margin-top: 2em;}",
+        ".multirow__inner {box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px; margin-bottom: 2em; margin-top: 2em;}",
         ".image-with-text__content {padding: 1em;}",
         ".image-with-text__media-item {display: none;}",
         ".button {display: none;}",
@@ -55,8 +54,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
         "image_layout": "alternate-left",
-        "section_color_scheme": "scheme-1",
-        "row_color_scheme": "scheme-1",
+        "section_color_scheme": "scheme-3",
+        "row_color_scheme": "scheme-menu-drawer",
         "mobile_content_alignment": "center",
         "padding_top": 0,
         "padding_bottom": 0
