@@ -28,7 +28,7 @@
         "row_wCYPQP"
       ],
       "custom_css": [
-        ".multirow {box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;}",
+        ".multirow__inner {box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;}",
         ".image-with-text__content {padding: 1em;}",
         ".image-with-text__media-item {display: none;}",
         ".button {display: none;}",
