@@ -28,6 +28,7 @@
         "row_wCYPQP"
       ],
       "custom_css": [
+        ".image-with-text__content {padding: 1em;}",
         ".image-with-text__media-item {display: none;}",
         ".button {display: none;}",
         ".image-with-text__heading {font-size: 1.2em;}"
