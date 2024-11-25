@@ -164,11 +164,117 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multirow_tirQLn": {
+      "type": "multirow",
+      "blocks": {
+        "row_E3rcHc": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Waxing</strong>",
+            "text": "",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_nBjbM4": {
+          "type": "row",
+          "repeater": "{{ page.metafields.custom.waxing.value }}",
+          "settings": {
+            "caption": "{{ block.repeater.prices.value }}",
+            "heading": "{{ block.repeater.service_name.value }}",
+            "text": "<p>{{ block.repeater.information.value }}</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_E3rcHc",
+        "row_nBjbM4"
+      ],
+      "custom_css": [
+        ".multirow__inner {box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px; margin-bottom: 2em;}",
+        ".image-with-text__content {padding: 1em;}",
+        ".image-with-text__media-item {display: none;}",
+        ".button {display: none;}",
+        ".image-with-text__heading {font-size: 1.2em;}"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "small",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_7pQ9mx": {
+      "type": "multirow",
+      "blocks": {
+        "row_HWHprB": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Cosmetic Tattoo</strong>",
+            "text": "",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_aCCJXG": {
+          "type": "row",
+          "repeater": "{{ page.metafields.custom.cosmetictattoo.value }}",
+          "settings": {
+            "caption": "{{ block.repeater.prices.value }}",
+            "heading": "{{ block.repeater.service_name.value }}",
+            "text": "<p>{{ block.repeater.information.value }}</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_HWHprB",
+        "row_aCCJXG"
+      ],
+      "custom_css": [
+        ".multirow__inner {box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px; margin-bottom: 2em;}",
+        ".image-with-text__content {padding: 1em;}",
+        ".image-with-text__media-item {display: none;}",
+        ".button {display: none;}",
+        ".image-with-text__heading {font-size: 1.2em;}"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "small",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "multirow_tNKmfW",
     "multirow_hzMtFy",
-    "multirow_QGykdQ"
+    "multirow_QGykdQ",
+    "multirow_tirQLn",
+    "multirow_7pQ9mx"
   ]
 }
