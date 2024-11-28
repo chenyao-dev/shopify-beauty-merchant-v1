@@ -1,221 +1,245 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-	"sections": {
-		"multirow_tNKmfW": {
-			"type": "multirow-custom",
-			"blocks": {
-				"row_fKgbzR": {
-					"type": "row",
-					"settings": {
-						"caption": "",
-						"heading": "<strong>Brow and eye treatments</strong>",
-						"text": "",
-						"button_label": "",
-						"button_link": ""
-					}
-				},
-				"row_wCYPQP": {
-					"type": "row",
-					"repeater": "{{ page.metafields.custom.service_item.value }}",
-					"settings": {
-						"caption": "{{ block.repeater.prices.value }}",
-						"heading": "{{ block.repeater.service_name.value }}",
-						"text": "<p>{{ block.repeater.information.value }}</p>",
-						"button_label": "",
-						"button_link": ""
-					}
-				}
-			},
-			"block_order": ["row_fKgbzR", "row_wCYPQP"],
-			"settings": {
-				"image_height": "medium",
-				"desktop_image_width": "small",
-				"heading_size": "h2",
-				"text_style": "body",
-				"button_style": "primary",
-				"desktop_content_position": "middle",
-				"desktop_content_alignment": "center",
-				"image_layout": "alternate-left",
-				"section_color_scheme": "scheme-1",
-				"row_color_scheme": "scheme-1",
-				"mobile_content_alignment": "center",
-				"padding_top": 0,
-				"padding_bottom": 0
-			}
-		},
-		"multirow_hzMtFy": {
-			"type": "multirow-custom",
-			"blocks": {
-				"row_h8dHjq": {
-					"type": "row",
-					"settings": {
-						"caption": "",
-						"heading": "<strong>Lash Extensions</strong>",
-						"text": "",
-						"button_label": "",
-						"button_link": ""
-					}
-				},
-				"row_47AMNG": {
-					"type": "row",
-					"repeater": "{{ page.metafields.custom.service_lashextension.value }}",
-					"settings": {
-						"caption": "{{ block.repeater.prices.value }}",
-						"heading": "{{ block.repeater.service_name.value }}",
-						"text": "<p>{{ block.repeater.information.value }}</p>",
-						"button_label": "",
-						"button_link": ""
-					}
-				}
-			},
-			"block_order": ["row_h8dHjq", "row_47AMNG"],
-			"settings": {
-				"image_height": "medium",
-				"desktop_image_width": "small",
-				"heading_size": "h2",
-				"text_style": "body",
-				"button_style": "primary",
-				"desktop_content_position": "middle",
-				"desktop_content_alignment": "center",
-				"image_layout": "alternate-left",
-				"section_color_scheme": "scheme-1",
-				"row_color_scheme": "scheme-1",
-				"mobile_content_alignment": "center",
-				"padding_top": 0,
-				"padding_bottom": 0
-			}
-		},
-		"multirow_QGykdQ": {
-			"type": "multirow-custom",
-			"blocks": {
-				"row_8fWhi4": {
-					"type": "row",
-					"settings": {
-						"caption": "",
-						"heading": "<strong>Makeup</strong>",
-						"text": "",
-						"button_label": "",
-						"button_link": ""
-					}
-				},
-				"row_b3AjEh": {
-					"type": "row",
-					"repeater": "{{ page.metafields.custom.makeup.value }}",
-					"settings": {
-						"caption": "{{ block.repeater.prices.value }}",
-						"heading": "{{ block.repeater.service_name.value }}",
-						"text": "<p>{{ block.repeater.information.value }}</p>",
-						"button_label": "",
-						"button_link": ""
-					}
-				}
-			},
-			"block_order": ["row_8fWhi4", "row_b3AjEh"],
-			"settings": {
-				"image_height": "medium",
-				"desktop_image_width": "small",
-				"heading_size": "h2",
-				"text_style": "body",
-				"button_style": "primary",
-				"desktop_content_position": "middle",
-				"desktop_content_alignment": "center",
-				"image_layout": "alternate-left",
-				"section_color_scheme": "scheme-1",
-				"row_color_scheme": "scheme-1",
-				"mobile_content_alignment": "center",
-				"padding_top": 0,
-				"padding_bottom": 0
-			}
-		},
-		"multirow_tirQLn": {
-			"type": "multirow-custom",
-			"blocks": {
-				"row_E3rcHc": {
-					"type": "row",
-					"settings": {
-						"caption": "",
-						"heading": "<strong>Waxing</strong>",
-						"text": "",
-						"button_label": "",
-						"button_link": ""
-					}
-				},
-				"row_nBjbM4": {
-					"type": "row",
-					"repeater": "{{ page.metafields.custom.waxing.value }}",
-					"settings": {
-						"caption": "{{ block.repeater.prices.value }}",
-						"heading": "{{ block.repeater.service_name.value }}",
-						"text": "<p>{{ block.repeater.information.value }}</p>",
-						"button_label": "",
-						"button_link": ""
-					}
-				}
-			},
-			"block_order": ["row_E3rcHc", "row_nBjbM4"],
-			"settings": {
-				"image_height": "medium",
-				"desktop_image_width": "small",
-				"heading_size": "h2",
-				"text_style": "body",
-				"button_style": "primary",
-				"desktop_content_position": "middle",
-				"desktop_content_alignment": "center",
-				"image_layout": "alternate-left",
-				"section_color_scheme": "scheme-1",
-				"row_color_scheme": "scheme-1",
-				"mobile_content_alignment": "center",
-				"padding_top": 0,
-				"padding_bottom": 0
-			}
-		},
-		"multirow_7pQ9mx": {
-			"type": "multirow-custom",
-			"blocks": {
-				"row_HWHprB": {
-					"type": "row",
-					"settings": {
-						"caption": "",
-						"heading": "<strong>Cosmetic Tattoo</strong>",
-						"text": "",
-						"button_label": "",
-						"button_link": ""
-					}
-				},
-				"row_aCCJXG": {
-					"type": "row",
-					"repeater": "{{ page.metafields.custom.cosmetictattoo.value }}",
-					"settings": {
-						"caption": "{{ block.repeater.prices.value }}",
-						"heading": "{{ block.repeater.service_name.value }}",
-						"text": "<p>{{ block.repeater.information.value }}</p>",
-						"button_label": "",
-						"button_link": ""
-					}
-				}
-			},
-			"block_order": ["row_HWHprB", "row_aCCJXG"],
-			"settings": {
-				"image_height": "medium",
-				"desktop_image_width": "small",
-				"heading_size": "h2",
-				"text_style": "body",
-				"button_style": "primary",
-				"desktop_content_position": "middle",
-				"desktop_content_alignment": "center",
-				"image_layout": "alternate-left",
-				"section_color_scheme": "scheme-1",
-				"row_color_scheme": "scheme-1",
-				"mobile_content_alignment": "center",
-				"padding_top": 0,
-				"padding_bottom": 0
-			}
-		}
-	},
-	"order": [
-		"multirow_tNKmfW",
-		"multirow_hzMtFy",
-		"multirow_QGykdQ",
-		"multirow_tirQLn",
-		"multirow_7pQ9mx"
-	]
+  "sections": {
+    "multirow_custom_CpbRUF": {
+      "type": "multirow-custom",
+      "blocks": {
+        "row_xGVf64": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Brow and eye treatments</strong>",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_hCeCqc": {
+          "type": "row",
+          "repeater": "{{ page.metafields.custom.service_item.value }}",
+          "settings": {
+            "caption": "{{ block.repeater.prices.value }}",
+            "heading": "{{ block.repeater.service_name.value }}",
+            "text": "<p>{{ block.repeater.information.value }}</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_xGVf64",
+        "row_hCeCqc"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_custom_ffDahe": {
+      "type": "multirow-custom",
+      "blocks": {
+        "row_GKRCtX": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Lash Extensions</strong>",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_Apt4GT": {
+          "type": "row",
+          "repeater": "{{ page.metafields.custom.service_lashextension.value }}",
+          "settings": {
+            "caption": "{{ block.repeater.prices.value }}",
+            "heading": "{{ block.repeater.service_name.value }}",
+            "text": "<p>{{ block.repeater.information.value }}</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_GKRCtX",
+        "row_Apt4GT"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_QGykdQ": {
+      "type": "multirow-custom",
+      "blocks": {
+        "row_8fWhi4": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Makeup</strong>",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_b3AjEh": {
+          "type": "row",
+          "repeater": "{{ page.metafields.custom.makeup.value }}",
+          "settings": {
+            "caption": "{{ block.repeater.prices.value }}",
+            "heading": "{{ block.repeater.service_name.value }}",
+            "text": "<p>{{ block.repeater.information.value }}</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_8fWhi4",
+        "row_b3AjEh"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "small",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_tirQLn": {
+      "type": "multirow-custom",
+      "blocks": {
+        "row_E3rcHc": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Waxing</strong>",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_nBjbM4": {
+          "type": "row",
+          "repeater": "{{ page.metafields.custom.waxing.value }}",
+          "settings": {
+            "caption": "{{ block.repeater.prices.value }}",
+            "heading": "{{ block.repeater.service_name.value }}",
+            "text": "<p>{{ block.repeater.information.value }}</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_E3rcHc",
+        "row_nBjbM4"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "small",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_7pQ9mx": {
+      "type": "multirow-custom",
+      "blocks": {
+        "row_HWHprB": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Cosmetic Tattoo</strong>",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_aCCJXG": {
+          "type": "row",
+          "repeater": "{{ page.metafields.custom.cosmetictattoo.value }}",
+          "settings": {
+            "caption": "{{ block.repeater.prices.value }}",
+            "heading": "{{ block.repeater.service_name.value }}",
+            "text": "<p>{{ block.repeater.information.value }}</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_HWHprB",
+        "row_aCCJXG"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "small",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "multirow_custom_CpbRUF",
+    "multirow_custom_ffDahe",
+    "multirow_QGykdQ",
+    "multirow_tirQLn",
+    "multirow_7pQ9mx"
+  ]
 }
