@@ -665,12 +665,16 @@
 
 	}
 
-	var width = window.innerWidth;
-	if (width >= 750) {
-		onWideScreenSwipe();
-	} else {
-		onMobileScreenSwipe();
+	const loadScript = (width) => {
+		if (width >= 750) {
+			onWideScreenSwipe();
+		} else {
+			onMobileScreenSwipe();
+		}
 	}
+
+	window.loadScript = loadScript(window.length);
+	window.onresize = loadScript(window.innerWidth);
 
 
 </script>
