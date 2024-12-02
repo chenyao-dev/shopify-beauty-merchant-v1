@@ -1,5 +1,6 @@
 .list-payment {
   display: flex;
+	flex-direction: row-reverse !important;
   flex-wrap: wrap;
   justify-content: center;
   margin: -0.5rem 0;
@@ -19,4 +20,5 @@
   align-items: center;
   display: flex;
   padding: 0.5rem;
+	width: auto;
 }
