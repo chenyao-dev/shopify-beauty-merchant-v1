@@ -10,143 +10,147 @@
 		background: transparent !important;
 	}
 
-	:root {
-		--shadow: rgba(0, 0, 0, 0.8)
+	@media screen and (max-width: 750px) {
+
+		:root {
+			--shadow: rgba(0, 0, 0, 0.8)
+		}
+
+		.custom_cards_body {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		#custom_cards {
+			height: auto;
+			display: inline-flex;
+			overflow: hidden;
+			scrollbar-width: none;
+			transform: translateX(0);
+			will-change: transform;
+			transition: transform 0.3s ease-out;
+			cursor: grab;
+		}
+
+		.custom_card {
+			width: 100vw;
+			display: flex;
+			padding: 3em 0;
+
+			justify-content: center;
+			align-items: center;
+		}
+
+		.custom_card > .card__content{
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+			background: linear-gradient(180deg, rgba(255,255,255,0.22454919467787116) 35%, rgba(247,194,205,0.36740633753501406) 100%);
+			border-radius: 15px;
+			backdrop-filter: blur(5px);
+			-webkit-backdrop-filter: blur(5px);
+
+			width: 90%;
+			height: 100%;
+			transition: transform 0.3s ease-in-out;
+			box-shadow: 5px 5px 50px -1px var(--shadow);
+			/* border-radius: 4px; */
+			user-select: none;
+			text-align: center;
+		}
+
+		.grabbing {
+			cursor: grabbing;
+		}
+
+		.grabbing .custom_card > .card__content {
+			transform: scale(0.9);
+			box-shadow: 5px 5px 40px -1px var(--shadow);
+		}
+
+		.card_content_header {
+			margin: 0;
+			display: none;
+		}
+
+		.card__content_layout {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			width: 100%;
+		}
+
+		.phone {
+			display: flex;
+			flex-direction: row;
+			flex-wrap:wrap;
+		}
+
+		.phone > p {
+			flex: 50%
+		}
+
+		.phone > .button {
+			margin: 1em 2em !important;
+		}
+
+		.hour {
+			width: 100%;
+			padding: 0 2em;
+		}
+
+		.hour > h5 {
+			margin-bottom: 0;
+			display: none;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul > li {
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		ul > li > p {
+			margin-bottom: 0;
+			margin-top: 5px;
+		}
+
+		.visit-us {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		.visit-us > a {
+			color: inherit;
+		}
+
+		.visit-us > p {
+			display: none;
+		}
+
+		.map {
+			margin: 1em;
+			width: auto;
+			height: 200px;
+			border-radius: 15px;
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+		}
+
+		.hideOnDesktop {
+			margin: 0 0 1em 0;
+			font-weight: 500;
+		}
 	}
 
-	.custom_cards_body {
-		height: 100%;
-		width: 100%;
-		overflow: hidden;
-	}
-
-	#custom_cards {
-		height: auto;
-		display: inline-flex;
-		overflow: hidden;
-		scrollbar-width: none;
-		transform: translateX(0);
-		will-change: transform;
-		transition: transform 0.3s ease-out;
-		cursor: grab;
-	}
-
-	.custom_card {
-		width: 100vw;
-		display: flex;
-		padding: 3em 0;
-
-		justify-content: center;
-		align-items: center;
-	}
-
-	.custom_card > .card__content{
-		box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-		background: linear-gradient(180deg, rgba(255,255,255,0.22454919467787116) 35%, rgba(247,194,205,0.36740633753501406) 100%);
-		border-radius: 15px;
-		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
-
-		width: 90%;
-		height: 100%;
-		transition: transform 0.3s ease-in-out;
-		box-shadow: 5px 5px 50px -1px var(--shadow);
-		/* border-radius: 4px; */
-		user-select: none;
-		text-align: center;
-	}
-
-	.grabbing {
-		cursor: grabbing;
-	}
-
-	.grabbing .custom_card > .card__content {
-		transform: scale(0.9);
-		box-shadow: 5px 5px 40px -1px var(--shadow);
-	}
-
-	.card_content_header {
-		margin: 0;
-		display: none;
-	}
-
-	.card__content_layout {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		width: 100%;
-	}
-
-	.phone {
-		display: flex;
-		flex-direction: row;
-		flex-wrap:wrap;
-	}
-
-	.phone > p {
-		flex: 50%
-	}
-
-	.phone > .button {
-		margin: 1em 2em !important;
-	}
-
-	.hour {
-		width: 100%;
-		padding: 0 2em;
-	}
-
-	.hour > h5 {
-		margin-bottom: 0;
-		display: none;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	ul > li {
-		list-style: none;
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	ul > li > p {
-		margin-bottom: 0;
-		margin-top: 5px;
-	}
-
-	.visit-us {
-		display: flex;
-		flex-direction: column-reverse;
-	}
-	.visit-us > a {
-		color: inherit;
-	}
-
-	.visit-us > p {
-		display: none;
-	}
-
-	.map {
-		margin: 1em;
-		width: auto;
-		height: 200px;
-		border-radius: 15px;
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-	}
-
-	.hideOnDesktop {
-		margin: 0 0 1em 0;
-		font-weight: 500;
-	}
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
