@@ -171,6 +171,7 @@
 			padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
 			margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 			margin-top: -20vh;
+			padding-top: 2vh;
 
 			outline: calc(var(--outline-width) * 10) solid blue;
 		
@@ -218,14 +219,14 @@
 			grid-template-areas: "info hours";
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: auto;
-			gap: 10em;
+			gap: 5em;
 		}
 
 		.visit-us {
 			display: grid;
-			grid-template-columns: 1fr 3fr;
+			grid-template-columns: 1fr 1fr;
 			grid-template-rows: auto;
-			row-gap: 2em;
+			row-gap: 15px;
 
 			align-items: center;
 			justify-content: space-evenly;
