@@ -14,77 +14,55 @@
       "disabled": true,
       "settings": {
         "title": "Shop by Collections",
-        "sort": "alphabetical",
+        "sort": "products_high",
         "image_ratio": "square",
         "columns_desktop": 4,
         "columns_mobile": "2"
       }
     },
-    "featured_product_n7PUdQ": {
-      "type": "featured-product",
+    "collection_list_WDdmJr": {
+      "type": "collection-list",
       "blocks": {
-        "text_HLd8NR": {
-          "type": "text",
+        "featured_collection_MdGRGC": {
+          "type": "featured_collection",
           "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
+            "collection": "brow-code"
           }
         },
-        "title_yxTX3q": {
-          "type": "title",
+        "featured_collection_gBa4j9": {
+          "type": "featured_collection",
           "settings": {
-            "heading_size": "h1"
+            "collection": "elleebana-lash-lift-aftercare"
           }
         },
-        "price_ff4JdX": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_zm3nFf": {
-          "type": "variant_picker",
+        "featured_collection_fctAM4": {
+          "type": "featured_collection",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
+            "collection": "revitalash"
           }
         },
-        "quantity_selector_9d4zbp": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_mcFKV6": {
-          "type": "buy_buttons",
+        "featured_collection_8nLcMj": {
+          "type": "featured_collection",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_NfP4NW": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
+            "collection": "gift-vouchers"
           }
         }
       },
       "block_order": [
-        "text_HLd8NR",
-        "title_yxTX3q",
-        "price_ff4JdX",
-        "variant_picker_zm3nFf",
-        "quantity_selector_9d4zbp",
-        "buy_buttons_mcFKV6",
-        "share_NfP4NW"
+        "featured_collection_MdGRGC",
+        "featured_collection_gBa4j9",
+        "featured_collection_fctAM4",
+        "featured_collection_8nLcMj"
       ],
       "settings": {
-        "product": "gift-card",
+        "title": "The B.M Collections",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 4,
         "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
+        "show_view_all": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -92,6 +70,6 @@
   },
   "order": [
     "main",
-    "featured_product_n7PUdQ"
+    "collection_list_WDdmJr"
   ]
 }
