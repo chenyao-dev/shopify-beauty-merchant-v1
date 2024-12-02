@@ -20,30 +20,71 @@
         "columns_mobile": "2"
       }
     },
-    "featured_collection_8NXDTi": {
-      "type": "featured-collection",
+    "featured_product_n7PUdQ": {
+      "type": "featured-product",
+      "blocks": {
+        "text_HLd8NR": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_yxTX3q": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_ff4JdX": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_zm3nFf": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_9d4zbp": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_mcFKV6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_NfP4NW": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_HLd8NR",
+        "title_yxTX3q",
+        "price_ff4JdX",
+        "variant_picker_zm3nFf",
+        "quantity_selector_9d4zbp",
+        "buy_buttons_mcFKV6",
+        "share_NfP4NW"
+      ],
       "settings": {
-        "title": "The B.M. collection",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "brow-code",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "product": "gift-card",
         "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -51,6 +92,6 @@
   },
   "order": [
     "main",
-    "featured_collection_8NXDTi"
+    "featured_product_n7PUdQ"
   ]
 }
