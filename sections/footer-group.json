@@ -14,7 +14,7 @@
     "footer": {
       "type": "footer",
       "custom_css": [
-        "ul .list-payment {display: flex !important; flex-direction: row !important;}"
+        ".footer__payment > .list-payment {display: flex !important; flex-direction: row !important;}"
       ],
       "settings": {
         "color_scheme": "scheme-1",
