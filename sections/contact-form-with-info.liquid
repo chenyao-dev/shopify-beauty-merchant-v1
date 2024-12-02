@@ -1,0 +1,758 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+	.field__input {
+		background: transparent !important;
+	}
+
+	:root {
+		--shadow: rgba(0, 0, 0, 0.8)
+	}
+
+	.custom_cards_body {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	#custom_cards {
+		height: auto;
+		display: inline-flex;
+		overflow: hidden;
+		scrollbar-width: none;
+		transform: translateX(0);
+		will-change: transform;
+		transition: transform 0.3s ease-out;
+		cursor: grab;
+	}
+
+	.custom_card {
+		width: 100vw;
+		display: flex;
+		padding: 3em 0;
+
+		justify-content: center;
+		align-items: center;
+	}
+
+	.custom_card > .card__content{
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+		background: linear-gradient(180deg, rgba(255,255,255,0.22454919467787116) 35%, rgba(247,194,205,0.36740633753501406) 100%);
+		border-radius: 15px;
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+
+		width: 90%;
+		height: 100%;
+		transition: transform 0.3s ease-in-out;
+		box-shadow: 5px 5px 50px -1px var(--shadow);
+		/* border-radius: 4px; */
+		user-select: none;
+		text-align: center;
+	}
+
+	.grabbing {
+		cursor: grabbing;
+	}
+
+	.grabbing .custom_card > .card__content {
+		transform: scale(0.9);
+		box-shadow: 5px 5px 40px -1px var(--shadow);
+	}
+
+	.card_content_header {
+		margin: 0;
+		display: none;
+	}
+
+	.card__content_layout {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+	}
+
+	.phone {
+		display: flex;
+		flex-direction: row;
+		flex-wrap:wrap;
+	}
+
+	.phone > p {
+		flex: 50%
+	}
+
+	.phone > .button {
+		margin: 1em 2em !important;
+	}
+
+	.hour {
+		width: 100%;
+		padding: 0 2em;
+	}
+
+	.hour > h5 {
+		margin-bottom: 0;
+		display: none;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	ul > li {
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	ul > li > p {
+		margin-bottom: 0;
+		margin-top: 5px;
+	}
+
+	.visit-us {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.visit-us > a {
+		color: inherit;
+	}
+
+	.visit-us > p {
+		display: none;
+	}
+
+	.map {
+		margin: 1em;
+		width: auto;
+		height: 200px;
+		border-radius: 15px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+	}
+
+	.hideOnDesktop {
+		margin: 0 0 1em 0;
+		font-weight: 500;
+	}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+		
+		:root {
+			--card-height: 55vw;
+			--card-margin: 4vw;
+			--card-top-offset: 3em;
+			--numcards: 3;
+			--outline-width: 0px;
+		}
+
+		.hideOnDesktop {
+			display: none;
+		}
+
+		#custom_cards {
+			padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+			margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+			margin-top: -20vh;
+
+			outline: calc(var(--outline-width) * 10) solid blue;
+		
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(var(--numcards), var(--card-height));
+			gap: var(--card-margin);
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.custom_card {
+			position: sticky;
+			top: 10em !important;
+			padding-top: var(--card-top-offset);
+			transform-origin: 50% 0%;
+			will-change: transform;
+		}
+
+		.card__content {
+			margin: 0 auto !important;
+			width: 70% !important;
+			height: 500px;
+			box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+			background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(247,194,205,0.36740633753501406) 100%) !important;
+			border-radius: 16px;
+			backdrop-filter: blur(5px);
+			-webkit-backdrop-filter: blur(5px);
+			border: 1px solid linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(247,194,205,0.36740633753501406) 100%);
+		}
+
+		.card_content_header {
+			margin-top: -1em;
+			margin-bottom: 1em;
+			text-align: center;
+			text-decoration: underline;
+		}
+
+		.card_content_padding_override {
+			margin-left: 5vw;
+			margin-right: 5vw;
+			height: 100% !important;
+		}
+
+		.card__content_layout {
+			display: grid;
+			grid-template-areas: "info hours";
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			gap: 10em;
+		}
+
+		.visit-us {
+			display: grid;
+			grid-template-columns: 1fr 3fr;
+			grid-template-rows: auto;
+			row-gap: 2em;
+
+			align-items: center;
+			justify-content: space-evenly;
+		}
+
+		.map {
+			grid-column-start: 1;
+  		grid-column-end: 3;
+
+			width: 400px;
+			height: 300px;
+			border-radius: 15px;
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+		}
+
+		.visit-us > p {
+			margin: 0;
+			font-weight: 500;
+		}
+		.visit-us > a {
+			color: inherit;
+			text-decoration: inherit;
+			cursor: pointer;
+			font-weight: 500;
+		}
+
+		.phone {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin: 1em;
+			height: 100% !important;
+		}
+
+		.phone > p {
+			width: 100%;
+			flex: 50% !important;
+			font-weight: 500;
+			padding-left: 1.5em;
+		}
+
+		.phone > a {
+			color: inherit;
+			text-decoration: inherit;
+			cursor: pointer;
+			flex: 100%;
+			width: 100%;
+			font-weight: 500;
+		}
+
+		.hour {
+			text-align: center;
+			height: 100%;
+		}
+
+		.hour > h5 {
+			margin-top: 15px;
+		}
+
+		.hour > ul {
+			list-style: none;
+			padding: 0 2em;
+		}
+
+		.hour > ul > li {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.hour > ul > li > p {
+			margin: 5px;
+		}
+  }
+{%- endstyle -%}
+
+<div class="custom_cards_body">
+	<div id="custom_cards" class="color-{{ section.settings.color_scheme }} gradient">
+		<div class="custom_card">
+			<div class="card__content">
+				<div class="section-{{ section.id }}-padding card_content_padding_override">
+					<h4 class="card_content_header">Call us</h4>
+					<div class="card__content_layout">
+						<div class="info phone">
+							<p>THE B.M. NO.</p>
+							<p>09 218 7892</p>
+							<a
+								role="link" aria-disabled="true"
+								href="tel: 092187892"
+								class="button button--{{ settings.button_style }} sticky-banner-button"
+							>
+								<b>
+									Call us
+								</b>
+							</a>
+							<p class="hideOnDesktop">&#8668 swipe to see our location &#8668</p>
+						</div>
+						<div class="hour">
+							<h5>Opening hours</h6>
+							<ul>
+								<li id="mon">
+									<p>Monday</p>
+									<p>Closed</p>
+								</li>
+								<li id="tue">
+									<p>Tuesday</p>
+									<p>10am - 5.30pm</p>
+								</li>
+								<li id="wed">
+									<p>Wednesday</p>
+									<p>10am - 8pm</p>
+								</li>
+								<li id="thur">
+									<p>Thursday</p>
+									<p>10am - 8pm</p>
+								</li>
+								<li id="fri">
+									<p>Friday</p>
+									<p>10am - 6pm</p>
+								</li>
+								<li id="sat">
+									<p>Saturday</p>
+									<p>10am - 5pm</p>
+								</li>
+								<li id="sun">
+									<p>Sunday</p>
+									<p>Closed</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom_card">
+			<div class="card__content">
+				<div class="section-{{ section.id }}-padding card_content_padding_override">
+					<h4 class="card_content_header">Visit us</h4>
+					<div class="card__content_layout">
+						<div class="info visit-us">
+							<div class="map">
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.859238489999!2d174.73148847639717!3d-36.845847079343955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47176ecdc5f5%3A0x8b89f05b24742c3!2sThe%20Beauty%20Merchants!5e0!3m2!1sen!2snz!4v1732964607306!5m2!1sen!2snz" 
+									width="100%" height="100%" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+								>
+								</iframe>
+							</div>
+							<p>Address</p>
+							<a href="https://maps.app.goo.gl/BGhVuL9th8ooDdsP6">238 Jervois Road, Herne Bay, Auckland 1011</a>
+						</div>
+						<p class="hideOnDesktop">&#8668 swipe to leave a message &#8668</p>
+						<p class="hideOnDesktop">&#8669 swipe to call &#8669</p>
+						<div class="hour">
+							<h5>Opening hours</h5>
+							<ul>
+								<li id="mon">
+									<p>Monday</p>
+									<p>Closed</p>
+								</li>
+								<li id="tue">
+									<p>Tuesday</p>
+									<p>10am - 5.30pm</p>
+								</li>
+								<li id="wed">
+									<p>Wednesday</p>
+									<p>10am - 8pm</p>
+								</li>
+								<li id="thur">
+									<p>Thursday</p>
+									<p>10am - 8pm</p>
+								</li>
+								<li id="fri">
+									<p>Friday</p>
+									<p>10am - 6pm</p>
+								</li>
+								<li id="sat">
+									<p>Saturday</p>
+									<p>10am - 5pm</p>
+								</li>
+								<li id="sun">
+									<p>Sunday</p>
+									<p>Closed</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom_card">
+			<div class="card__content">
+				<div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+					<h4 class="card_content_header message">Leave a message</h4>
+					<p class="hideOnDesktop">&#8668 swipe to find other contact methods &#8668</p>
+					{%- if section.settings.heading != blank -%}
+						<h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+							{{ section.settings.heading }}
+						</h2>
+					{%- else -%}
+						<h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+					{%- endif -%}
+					{%- liquid
+						assign contact_form_class = 'isolate'
+						if settings.animations_reveal_on_scroll
+							assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+						endif
+					-%}
+					{%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+						{%- if form.posted_successfully? -%}
+							<h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+								{{- 'icon-success.svg' | inline_asset_content -}}
+								{{ 'templates.contact.form.post_success' | t }}
+							</h2>
+						{%- elsif form.errors -%}
+							<div class="form__message">
+								<h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+									{{- 'icon-error.svg' | inline_asset_content -}}
+									{{ 'templates.contact.form.error_heading' | t }}
+								</h2>
+							</div>
+							<ul class="form-status-list caption-large" role="list">
+								<li>
+									<a href="#ContactForm-email" class="link">
+										{{ form.errors.translated_fields.email | capitalize }}
+										{{ form.errors.messages.email }}
+									</a>
+								</li>
+							</ul>
+						{%- endif -%}
+						<div class="contact__fields">
+							<div class="field">
+								<input
+									class="field__input"
+									autocomplete="name"
+									type="text"
+									id="ContactForm-name"
+									name="contact[{{ 'templates.contact.form.name' | t }}]"
+									value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+									placeholder="{{ 'templates.contact.form.name' | t }}"
+								>
+								<label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+							</div>
+							<div class="field field--with-error">
+								<input
+									autocomplete="email"
+									type="email"
+									id="ContactForm-email"
+									class="field__input"
+									name="contact[email]"
+									spellcheck="false"
+									autocapitalize="off"
+									value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+									aria-required="true"
+									{% if form.errors contains 'email' %}
+										aria-invalid="true"
+										aria-describedby="ContactForm-email-error"
+									{% endif %}
+									placeholder="{{ 'templates.contact.form.email' | t }}"
+								>
+								<label class="field__label" for="ContactForm-email">
+									{{- 'templates.contact.form.email' | t }}
+									<span aria-hidden="true">*</span></label
+								>
+								{%- if form.errors contains 'email' -%}
+									<small class="contact__field-error" id="ContactForm-email-error">
+										<span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+										<span class="form__message">
+											<span class="svg-wrapper">
+												{{- 'icon-error.svg' | inline_asset_content -}}
+											</span>
+											{{- form.errors.translated_fields.email | capitalize }}
+											{{ form.errors.messages.email -}}
+										</span>
+									</small>
+								{%- endif -%}
+							</div>
+						</div>
+						<div class="field">
+							<input
+								type="tel"
+								id="ContactForm-phone"
+								class="field__input"
+								autocomplete="tel"
+								name="contact[{{ 'templates.contact.form.phone' | t }}]"
+								pattern="[0-9\-]*"
+								value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+								placeholder="{{ 'templates.contact.form.phone' | t }}"
+							>
+							<label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+						</div>
+						<div class="field">
+							<textarea
+								rows="10"
+								id="ContactForm-body"
+								class="text-area field__input"
+								name="contact[{{ 'templates.contact.form.comment' | t }}]"
+								placeholder="{{ 'templates.contact.form.comment' | t }}"
+							>
+								{{- form.body -}}
+							</textarea>
+							<label class="form__label field__label" for="ContactForm-body">
+								{{- 'templates.contact.form.comment' | t -}}
+							</label>
+						</div>
+						<div class="contact__button">
+							<button type="submit" class="button">
+								{{ 'templates.contact.form.send' | t }}
+							</button>
+						</div>
+					{%- endform -%}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="module">
+	import {scroll, animate} from "https://cdn.skypack.dev/motion";
+	const onWideScreenSwipe = () => {
+		const $cardsWrapper = document.querySelector('#custom_cards');
+		const $cards = document.querySelectorAll('.custom_card');
+
+		const numCards = $cards.length;
+
+		$cards.forEach(($card, index0) => {
+			
+			const index = index0 + 1;
+			const reverseIndex = numCards - index0;
+			const reverseIndex0 = numCards - index;
+
+			// Extra padding per card, so you can see the other stacked cards underneath at the top
+			$card.style.paddingTop = `calc(${index} * var(--card-top-offset))`;
+			
+			// Scroll-Linked Animation
+			scroll(
+				animate($card, {
+					// Earlier cards shrink more than later cards
+					scale: [ 1, 1 - (0.1 * reverseIndex0)],
+				}), {
+					// Each card should only shrink when it’s at the top.
+					// We can’t use exit on the els for this (as they are sticky)
+					// but can track $cardsWrapper instead.
+					target: $cardsWrapper,
+					offset: [`${index0 / numCards * 100}%`, `${index / numCards * 100}%`],
+				}
+			);
+		})
+	}
+
+	const onMobileScreenSwipe = () => {
+		// get our elements
+		const slider = document.querySelector('#custom_cards'),
+			slides = Array.from(document.querySelectorAll('.custom_card'))
+
+		// set up our state
+		let isDragging = false,
+			startPos = 0,
+			currentTranslate = 0,
+			prevTranslate = 0,
+			animationID,
+			currentIndex = 0
+
+		// add our event listeners
+		slides.forEach((slide, index) => {
+			const slideImage = slide.querySelector('.card__content')
+			// disable default image drag
+			slideImage.addEventListener('dragstart', (e) => e.preventDefault())
+			// pointer events
+			slide.addEventListener('pointerdown', pointerDown(index))
+			slide.addEventListener('pointerup', pointerUp)
+			slide.addEventListener('pointerleave', pointerUp)
+			slide.addEventListener('pointermove', pointerMove)
+		})
+
+		// make responsive to viewport changes
+		window.addEventListener('resize', setPositionByIndex)
+
+		// prevent menu popup on long press
+		window.oncontextmenu = function (event) {
+			event.preventDefault()
+			event.stopPropagation()
+			return false
+		}
+
+		// use a HOF so we have index in a closure
+		function pointerDown(index) {
+			return function (event) {
+				currentIndex = index
+				startPos = event.clientX
+				isDragging = true
+				animationID = requestAnimationFrame(animation)
+				slider.classList.add('grabbing')
+			}
+		}
+
+		function pointerMove(event) {
+			if (isDragging) {
+				const currentPosition = event.clientX
+				currentTranslate = prevTranslate + currentPosition - startPos
+			}
+		}
+
+		function pointerUp() {
+			cancelAnimationFrame(animationID)
+			isDragging = false
+			const movedBy = currentTranslate - prevTranslate
+
+			// if moved enough negative then snap to next slide if there is one
+			if (movedBy < -5 && currentIndex < slides.length - 1) currentIndex += 1
+
+			// if moved enough positive then snap to previous slide if there is one
+			if (movedBy > 5 && currentIndex > 0) currentIndex -= 1
+
+			setPositionByIndex()
+
+			slider.classList.remove('grabbing')
+		}
+
+		function animation() {
+			setSliderPosition()
+			if (isDragging) requestAnimationFrame(animation)
+		}
+
+		function setPositionByIndex() {
+			currentTranslate = currentIndex * -window.innerWidth
+			prevTranslate = currentTranslate
+			setSliderPosition()
+		}
+
+		function setSliderPosition() {
+			slider.style.transform = `translateX(${currentTranslate}px)`
+		}
+
+	}
+
+	var width = window.innerWidth;
+	if (width >= 750) {
+		onWideScreenSwipe();
+	} else {
+		onMobileScreenSwipe();
+	}
+
+
+</script>
+
+{% schema %}
+{
+  "name": "contact-form-with-info",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "t:sections.contact-form.settings.title.default",
+      "label": "t:sections.contact-form.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.contact-form.presets.name"
+    }
+  ]
+}
+{% endschema %}
