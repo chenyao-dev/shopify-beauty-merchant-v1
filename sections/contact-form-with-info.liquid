@@ -78,18 +78,13 @@
 		}
 
 		.phone {
-			display: flex;
-			flex-direction: row;
-			flex-wrap:wrap;
-		}
-
-		.phone > p {
-			flex: 50%
+			align-items: center;
+			justify-content: center;
 		}
 
 		.phone > .button {
-			margin: 1em 2em !important;
-			width: 100%;
+			margin: 1em 10em !important;
+			min-width: 200px;
 		}
 
 		.nogap {
@@ -99,7 +94,7 @@
 		.hour {
 			width: 70%;
 			padding: 0 2em;
-			min-width: 300px !important;
+			min-width: 350px !important;
 		}
 
 		.hour > h5 {
@@ -125,6 +120,7 @@
 		.hour > ul > li > p {
 			margin-bottom: 0;
 			margin-top: 5px;
+			font-size: 75%;
 		}
 
 		.visit-us {
@@ -153,11 +149,14 @@
 			font-size: 1.2em;
 		}
 
+		.desktopOnly {
+			display: none;
+		}
+
 		.extraSpace {
 			padding-bottom: 1em !important;
 		}
 	}
-
 
   @media screen and (min-width: 1025px) {
     .section-{{ section.id }}-padding {
@@ -177,59 +176,47 @@
 			display: none;
 		}
 
-		#custom_cards {
-			padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
-			margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
-			margin-top: -20vh;
-			padding-top: 2vh;
-
-			outline: calc(var(--outline-width) * 10) solid blue;
-		
-			display: grid;
-			grid-template-columns: 1fr;
-			grid-template-rows: repeat(var(--numcards), var(--card-height));
-			gap: var(--card-margin);
-			align-items: center;
-			justify-content: center;
-		}
-		
-		.custom_card {
-			position: sticky;
-			top: 10em !important;
-			padding-top: var(--card-top-offset);
-			transform-origin: 50% 0%;
-			will-change: transform;
-		}
-
-		.card__content {
-			margin: 0 auto !important;
-			width: 70% !important;
-			height: 500px;
+		.desktopOnly > .hour {
+			text-align: center;
 			box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
 			background: linear-gradient(90deg, rgba(252,246,242) 35%, rgba(253,216,200,255) 100%) !important;
 			border-radius: 16px;
 			border: 1px solid linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(247,194,205,0.36740633753501406) 100%);
+			margin: 0 2em;
+			padding: 1px 0 5px 0;
 		}
 
-		.card_content_header {
-			margin-top: -1em;
-			margin-bottom: 1em;
-			text-align: center;
-			text-decoration: underline;
+		.desktopOnly > .hour > ul {
+			list-style: none;
+			padding: 0 2em;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
 		}
 
-		.card_content_padding_override {
-			margin-left: 5vw;
-			margin-right: 5vw;
-			height: 100% !important;
+		.desktopOnly > .hour > ul > li {
+			display: flex;
+			flex-direction: column;
+			row-gap: 5px;
+			align-items: center;
+			justify-content: space-between;
 		}
 
-		.card__content_layout {
-			display: grid;
-			grid-template-areas: "info hours";
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: auto;
-			gap: 5em;
+		.desktopOnly > .hour > ul > li > p {
+			margin: 0 !important;
+		}
+
+		.hour-header {
+			font-weight: 600;
+		}
+
+		.custom_cards_body {
+			height: 110vh !important;
+		}
+
+		#custom_cards {
+			padding-top: 10vh;
 		}
 
 		.visit-us {
@@ -240,28 +227,18 @@
 
 			align-items: center;
 			justify-content: space-evenly;
+			background-image: url({{'visit-us.jpg' |  asset_url}});
+			background-size: cover;
 		}
 
 		.map {
 			grid-column-start: 1;
   		grid-column-end: 3;
 
-			width: 400px;
-			height: 300px;
+			width: 100%;
+			height: 100%;
 			border-radius: 15px;
 			box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-		}
-
-		.visit-us > p {
-			margin: 0;
-			font-weight: 500;
-		}
-
-		.visit-us > a {
-			color: inherit;
-			text-decoration: inherit;
-			cursor: pointer;
-			font-weight: 500;
 		}
 
 		.phone {
@@ -270,8 +247,9 @@
 			align-items: center;
 			justify-content: space-between;
 			flex-wrap: wrap;
-			margin: 1em;
 			height: 100% !important;
+			background-image: url({{'call-us.jpg' |  asset_url}});
+			background-size: cover;
 		}
 
 		.phone > p {
@@ -288,38 +266,284 @@
 			flex: 100%;
 			width: 100%;
 			font-weight: 500;
+			margin: 0 2em;
 		}
 
-		.hour {
-			text-align: center;
-			height: 100%;
-		}
-
-		.hour > h5 {
-			margin-top: 15px;
-		}
-
-		.hour > ul {
-			list-style: none;
-			padding: 0 2em;
-		}
-
-		.hour > ul > li {
+		.flip-cards {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: space-evenly;
+			padding: 2em 1em;
 		}
 
-		.hour > ul > li > p {
-			margin: 5px;
+		.flip-card {
+			background-color: transparent;
+			width: 300px;
+			height: 200px;
+			perspective: 1000px; /* Remove this if you don't want the 3D effect */
+		}
+
+		/* This container is needed to position the front and back side */
+		.flip-card-inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			transition: transform 0.8s;
+			transform-style: preserve-3d;
+		}
+
+		/* Do an horizontal flip when you move the mouse over the flip box container */
+		.flip-card:hover .flip-card-inner {
+			transform: rotateY(180deg);
+		}
+
+		/* Position the front and back side */
+		.flip-card-front, .flip-card-back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-backface-visibility: hidden; /* Safari */
+			backface-visibility: hidden;
+
+			box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+			border-radius: 16px;
+			border: 1px solid linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(247,194,205,0.36740633753501406) 100%);
+		}
+
+		/* Style the front side (fallback if image is missing) */
+		.flip-card-front {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 800;
+		}
+
+		/* Style the back side */
+		.flip-card-back {
+			background: linear-gradient(90deg, rgba(252,246,242) 35%, rgba(253,216,200,255) 100%) !important;
+			transform: rotateY(180deg);
+		}
+
+		.back-message {
+			height: auto !important;
+			width: 60vw;
+			align-self: left;
+			padding: 0 1em 1em 1em;
+		}
+
+		.front-message {
+			background-image: url({{'message-us.jpg' |  asset_url}});
+			background-size: cover;
 		}
   }
 {%- endstyle -%}
 
 <div class="custom_cards_body">
 	<div id="custom_cards" class="color-{{ section.settings.color_scheme }} gradient">
-		<div class="custom_card">
+		<div class="desktopOnly">
+			<div class="hour">
+				<ul>
+					<li id="mon">
+						<p class="hour-header">Monday</p>
+						<p>Closed</p>
+					</li>
+					<li id="tue">
+						<p class="hour-header">Tuesday</p>
+						<p>10am - 5.30pm</p>
+					</li>
+					<li id="wed">
+						<p class="hour-header">Wednesday</p>
+						<p>10am - 8pm</p>		
+					</li>
+					<li id="thur">
+						<p class="hour-header">Thursday</p>
+						<p>10am - 8pm</p>
+					</li>
+					<li id="fri">
+						<p class="hour-header">Friday</p>
+						<p>10am - 6pm</p>
+					</li>
+					<li id="sat">
+						<p class="hour-header">Saturday</p>
+						<p>10am - 5pm</p>
+					</li>
+					<li id="sun">
+						<p class="hour-header">Sunday</p>
+						<p>Closed</p>
+					</li>
+				</ul>
+			</div>
+			<div class="flip-cards">
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front phone">
+							Talk to our lovely staff
+						</div>
+						<div class="flip-card-back phone">
+							<p>THE B.M. NO.</p>
+							<p>09 218 7892</p>
+							<a
+								role="link" aria-disabled="true"
+								href="tel: 092187892"
+								class="button button--{{ settings.button_style }} sticky-banner-button"
+							>
+								<b>
+									Call us
+								</b>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front visit-us">
+							<p>Visit us at 238 Jervois Road, Herne Bay</p>
+						</div>
+						<div class="flip-card-back">
+							<div class="map">
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.859238489999!2d174.73148847639717!3d-36.845847079343955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47176ecdc5f5%3A0x8b89f05b24742c3!2sThe%20Beauty%20Merchants!5e0!3m2!1sen!2snz!4v1732964607306!5m2!1sen!2snz" 
+									width="100%" height="100%" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+								>
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front front-message">
+							Leave us a mesage
+						</div>
+						<div class="flip-card-back back-message">
+							<div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+								<h4 class="card_content_header message">Leave a message</h4>
+								<p class="hideOnDesktop">&#8669 swipe to find other contact methods &#8669</p>
+								{%- if section.settings.heading != blank -%}
+									<h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+										{{ section.settings.heading }}
+									</h2>
+								{%- else -%}
+									<h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+								{%- endif -%}
+								{%- liquid
+									assign contact_form_class = 'isolate'
+									if settings.animations_reveal_on_scroll
+										assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+									endif
+								-%}
+								{%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+									{%- if form.posted_successfully? -%}
+										<h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+											{{- 'icon-success.svg' | inline_asset_content -}}
+											{{ 'templates.contact.form.post_success' | t }}
+										</h2>
+									{%- elsif form.errors -%}
+										<div class="form__message">
+											<h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+												{{- 'icon-error.svg' | inline_asset_content -}}
+												{{ 'templates.contact.form.error_heading' | t }}
+											</h2>
+										</div>
+										<ul class="form-status-list caption-large" role="list">
+											<li>
+												<a href="#ContactForm-email" class="link">
+													{{ form.errors.translated_fields.email | capitalize }}
+													{{ form.errors.messages.email }}
+												</a>
+											</li>
+										</ul>
+									{%- endif -%}
+									<div class="contact__fields">
+										<div class="field">
+											<input
+												class="field__input"
+												autocomplete="name"
+												type="text"
+												id="ContactForm-name"
+												name="contact[{{ 'templates.contact.form.name' | t }}]"
+												value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+												placeholder="{{ 'templates.contact.form.name' | t }}"
+											>
+											<label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+										</div>
+										<div class="field field--with-error">
+											<input
+												autocomplete="email"
+												type="email"
+												id="ContactForm-email"
+												class="field__input"
+												name="contact[email]"
+												spellcheck="false"
+												autocapitalize="off"
+												value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+												aria-required="true"
+												{% if form.errors contains 'email' %}
+													aria-invalid="true"
+													aria-describedby="ContactForm-email-error"
+												{% endif %}
+												placeholder="{{ 'templates.contact.form.email' | t }}"
+											>
+											<label class="field__label" for="ContactForm-email">
+												{{- 'templates.contact.form.email' | t }}
+												<span aria-hidden="true">*</span></label
+											>
+											{%- if form.errors contains 'email' -%}
+												<small class="contact__field-error" id="ContactForm-email-error">
+													<span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+													<span class="form__message">
+														<span class="svg-wrapper">
+															{{- 'icon-error.svg' | inline_asset_content -}}
+														</span>
+														{{- form.errors.translated_fields.email | capitalize }}
+														{{ form.errors.messages.email -}}
+													</span>
+												</small>
+											{%- endif -%}
+										</div>
+									</div>
+									<div class="field">
+										<input
+											type="tel"
+											id="ContactForm-phone"
+											class="field__input"
+											autocomplete="tel"
+											name="contact[{{ 'templates.contact.form.phone' | t }}]"
+											pattern="[0-9\-]*"
+											value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+											placeholder="{{ 'templates.contact.form.phone' | t }}"
+										>
+										<label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+									</div>
+									<div class="field">
+										<textarea
+											rows="10"
+											id="ContactForm-body"
+											class="text-area field__input"
+											name="contact[{{ 'templates.contact.form.comment' | t }}]"
+											placeholder="{{ 'templates.contact.form.comment' | t }}"
+										>
+											{{- form.body -}}
+										</textarea>
+										<label class="form__label field__label" for="ContactForm-body">
+											{{- 'templates.contact.form.comment' | t -}}
+										</label>
+									</div>
+									<div class="contact__button">
+										<button type="submit" class="button">
+											{{ 'templates.contact.form.send' | t }}
+										</button>
+									</div>
+								{%- endform -%}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom_card hideOnDesktop">
 			<div class="card__content">
 				<div class="section-{{ section.id }}-padding card_content_padding_override">
 					<h4 class="card_content_header">Call us</h4>
@@ -338,7 +562,7 @@
 							</a>
 							<p class="hideOnDesktop">&#8668 swipe to see our location &#8668</p>
 						</div>
-						<div class="hour">
+						<div class="hour hideOnDesktop">
 							<h5>Opening hours</h5>
 							<ul>
 								<li id="mon">
@@ -375,7 +599,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="custom_card">
+		<div class="custom_card hideOnDesktop">
 			<div class="card__content">
 				<div class="section-{{ section.id }}-padding card_content_padding_override">
 					<h4 class="card_content_header">Visit us</h4>
@@ -393,7 +617,7 @@
 						</div>
 						<p class="hideOnDesktop nogap">&#8668 swipe to leave a message &#8668</p>
 						<p class="hideOnDesktop">&#8669 swipe to call &#8669</p>
-						<div class="hour extraSpace">
+						<div class="hour extraSpace hideOnDesktop">
 							<h5>Opening hours</h5>
 							<ul>
 								<li id="mon">
@@ -430,7 +654,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="custom_card">
+		<div class="custom_card hideOnDesktop">
 			<div class="card__content">
 				<div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
 					<h4 class="card_content_header message">Leave a message</h4>
