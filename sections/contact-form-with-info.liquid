@@ -11,7 +11,6 @@
 	}
 
 	@media screen and (max-width: 750px) {
-
 		:root {
 			--shadow: rgba(0, 0, 0, 0.8)
 		}
@@ -90,6 +89,11 @@
 
 		.phone > .button {
 			margin: 1em 2em !important;
+			width: 100%;
+		}
+
+		.nogap {
+			margin-bottom: 0 !important;
 		}
 
 		.hour {
@@ -147,6 +151,10 @@
 			font-weight: 500;
 			font-size: 1.2em;
 		}
+
+		.extraSpace {
+			padding-bottom: 1em !important;
+		}
 	}
 
 
@@ -197,7 +205,7 @@
 			width: 70% !important;
 			height: 500px;
 			box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
-			background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(247,194,205,0.36740633753501406) 100%) !important;
+			background: linear-gradient(90deg, rgba(252,246,242) 35%, rgba(253,216,200,255) 100%) !important;
 			border-radius: 16px;
 			border: 1px solid linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(247,194,205,0.36740633753501406) 100%);
 		}
@@ -329,7 +337,7 @@
 							<p class="hideOnDesktop">&#8668 swipe to see our location &#8668</p>
 						</div>
 						<div class="hour">
-							<h5>Opening hours</h6>
+							<h5>Opening hours</h5>
 							<ul>
 								<li id="mon">
 									<p>Monday</p>
@@ -381,9 +389,9 @@
 							<p>Address</p>
 							<a href="https://maps.app.goo.gl/BGhVuL9th8ooDdsP6">238 Jervois Road, Herne Bay, Auckland 1011</a>
 						</div>
-						<p class="hideOnDesktop">&#8668 swipe to leave a message &#8668</p>
+						<p class="hideOnDesktop nogap">&#8668 swipe to leave a message &#8668</p>
 						<p class="hideOnDesktop">&#8669 swipe to call &#8669</p>
-						<div class="hour">
+						<div class="hour extraSpace">
 							<h5>Opening hours</h5>
 							<ul>
 								<li id="mon">
@@ -424,7 +432,7 @@
 			<div class="card__content">
 				<div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
 					<h4 class="card_content_header message">Leave a message</h4>
-					<p class="hideOnDesktop">&#8668 swipe to find other contact methods &#8668</p>
+					<p class="hideOnDesktop">&#8669 swipe to find other contact methods &#8669</p>
 					{%- if section.settings.heading != blank -%}
 						<h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
 							{{ section.settings.heading }}
@@ -548,38 +556,6 @@
 </div>
 
 <script type="module">
-	import {scroll, animate} from "https://cdn.skypack.dev/motion";
-	const onWideScreenSwipe = () => {
-		const $cardsWrapper = document.querySelector('#custom_cards');
-		const $cards = document.querySelectorAll('.custom_card');
-
-		const numCards = $cards.length;
-
-		$cards.forEach(($card, index0) => {
-			
-			const index = index0 + 1;
-			const reverseIndex = numCards - index0;
-			const reverseIndex0 = numCards - index;
-
-			// Extra padding per card, so you can see the other stacked cards underneath at the top
-			$card.style.paddingTop = `calc(${index} * var(--card-top-offset))`;
-			
-			// Scroll-Linked Animation
-			scroll(
-				animate($card, {
-					// Earlier cards shrink more than later cards
-					scale: [ 1, 1 - (0.1 * reverseIndex0)],
-				}), {
-					// Each card should only shrink when it’s at the top.
-					// We can’t use exit on the els for this (as they are sticky)
-					// but can track $cardsWrapper instead.
-					target: $cardsWrapper,
-					offset: [`${index0 / numCards * 100}%`, `${index / numCards * 100}%`],
-				}
-			);
-		})
-	}
-
 	const onMobileScreenSwipe = () => {
 		// get our elements
 		const slider = document.querySelector('#custom_cards'),
@@ -667,17 +643,13 @@
 	}
 
 	const loadScript = (width) => {
-		if (width >= 750) {
-			onWideScreenSwipe();
-		} else {
+		if (width <= 750) {
 			onMobileScreenSwipe();
 		}
 	}
 
 	window.loadScript = loadScript(window.length);
 	window.onresize = loadScript(window.innerWidth);
-
-
 </script>
 
 {% schema %}
