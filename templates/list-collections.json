@@ -40,19 +40,12 @@
           "settings": {
             "collection": "revitalash"
           }
-        },
-        "featured_collection_8nLcMj": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "gift-vouchers"
-          }
         }
       },
       "block_order": [
         "featured_collection_MdGRGC",
         "featured_collection_gBa4j9",
-        "featured_collection_fctAM4",
-        "featured_collection_8nLcMj"
+        "featured_collection_fctAM4"
       ],
       "settings": {
         "title": "The B.M Collections",

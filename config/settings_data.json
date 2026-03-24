@@ -18,8 +18,8 @@
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
-    "animations_reveal_on_scroll": true,
-    "animations_hover_elements": "none",
+    "animations_reveal_on_scroll": false,
+    "animations_hover_elements": "3d-lift",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
     "buttons_radius": 4,
@@ -188,7 +188,7 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "",
+          "background": "#FFFFFF",
           "background_gradient": "rgba(252,246,242, 0.5)",
           "text": "#000000",
           "button": "#ffffff",
@@ -199,7 +199,7 @@
       },
       "scheme-menu-drawer": {
         "settings": {
-          "background": "",
+          "background": "#FFFFFF",
           "background_gradient": "",
           "text": "#000000",
           "button": "#ffffff",
